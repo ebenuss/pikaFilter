@@ -2,7 +2,7 @@ import random
 from pyrogram import Client as FilterBot, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from configs import BOT_PICS, StartTxT, HelpTxT, AboutTxT, LOGGER
-from FilterBot.database import db
+from pikaFilter.database import db
 
 @FilterBot.on_message(filters.private & filters.command("start"))
 async def startCMD(client: FilterBot, message: Message):
