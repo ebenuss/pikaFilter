@@ -1,7 +1,7 @@
 import ast, pyrogram 
 from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from FilterBot.database import db
+from pikaFilter.database import db
 from configs import ADMINS
 
 @Client.on_callback_query(filters.regex("(close_data|delallconfirm|delallcancel|groupcb|connectcb|disconnect|deletecb|backcb|alertmessage)"))
