@@ -1,0 +1,66 @@
+{
+    "name": "pikaFilter Bot",
+    "description": "Mongo DB'yi kullanan sınırsız bir filtre botu",
+    "logo": "https://telegra.ph/file/42184aa3580e2e56488ce.png",
+    "keywords": [
+        "UNLIMITED",
+        "Filter",
+        "Telegram Bot",
+        "Pikachu"
+    ],
+    "website": "https://github.com/pikaws",
+    "repository": "https://github.com/pikaws/pikaFilter",
+    "success_url": "https://t.me/pikaws",
+    "env": {
+        "WEBHOOK": {
+            "description": "Bu alanı değiştirmenize gerek yok!",
+            "value": "ANYTHING"
+        },
+        "TG_BOT_TOKEN": {
+            "description": "@BotFather'dan Telegram Bot Tokenınız",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "my.telegram.org veya @UseTGXBot'tan API Hash'iniz",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "my.telegram.org veya @UseTGXBot'taki APP kimliğiniz",
+            "value": ""
+        },
+        "AUTH_USERS": {
+            "description": "Bot komutlarını kullanabilen kullanıcıların kimliği",
+            "value": ""
+        },
+        "DATABASE_URI": {
+            "description": "https://cloud.mongodb.com/ adresinden veritabanı URL'si",
+            "value": ""
+        },
+        "DATABASE_NAME": {
+            "description": "MongoDB'deki veritabanı adınız. (Varsayılan 'Cluster0' olacaktır)",
+            "value": "Cluster0",
+            "required": false
+        },
+        "SAVE_USER": {
+            "description": "Kullanıcı ayrıntılarını kaydetmeniz mi gerekiyor? Kullanıcı bilgilerini ve toplam kullanıcı sayısını almak için kullanışlıdır. Filtre kapasitesini azaltabilir. Evet veya hayır verin",
+            "value": "no",
+            "required": false
+        },
+        "HEROKU_API_KEY": {
+            "description": "Dyno durumunu kontrol etmek için. https://dashboard.heroku.com/account adresine gidin, aşağı kaydırın ve API'yi Göster'e basın",
+            "value": "None",
+            "required": false
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
