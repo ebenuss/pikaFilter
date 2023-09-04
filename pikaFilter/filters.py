@@ -1,8 +1,8 @@
 import io, re, pyrogram
 from pyrogram import filters, Client, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from FilterBot.database import db
-from FilterBot.utils import get_file_id, parser, split_quotes
+from pikaFilter.database import db
+from pikaFilter.utils import get_file_id, parser, split_quotes
 from configs import ADMINS, ADD_FILTER_CMD, DELETE_FILTER_CMD, DELETE_ALL_CMD, AUTO_DELETE, AUTO_DELETE_SECOND
 
 @Client.on_message(filters.command(ADD_FILTER_CMD) & filters.incoming)
